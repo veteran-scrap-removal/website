@@ -1,6 +1,6 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Veteran Scrap Removal'
 theme = 'vsr'
 
 [languages.en]
@@ -11,6 +11,12 @@ identifier = "home"
 name = "Home"
 url = "/"
 weight = 10
+
+[[languages.en.menu.main]]
+identifier = "pricing"
+name = "Pricing"
+url = "/pricing/"
+weight = 11
 
 [[languages.en.menu.main]]
 identifier = "blog"
