@@ -19,27 +19,27 @@
   better the estimate.
 </h6>
 <br /><br />
-<form action="" method="GET">
+<form id="form">
   <div>
     <label
       >* Short description:
       <input
         type="text"
-        id="item"
-        name="item"
+        id="description"
+        name="description"
         placeholder="Short description"
         required
     /></label>
   </div>
   <div>
     <label
-      >Dimensions: h (in) - <input type="number" id="height" name="height" style="width: 75px;" min="0" /> w
+      >Dimensions Estimate: h (in) - <input type="number" id="height" name="height" style="width: 75px;" min="0" /> w
       (in) - <input type="number" id="width" name="width" style="width: 75px;" min="0" /> l (in) -
       <input type="number" id="length" name="length" style="width: 75px;" min="0" />
     </label>
 </div>
     <label>
-      <div>* Weight (lbs):<input type="number" id="weight" name="weight" min="0" required />
+      <div>* Weight Estimate (lbs):<input type="number" id="weight" name="weight" min="0" required />
     </label>
   </div>
 
@@ -83,5 +83,19 @@
 </tfoot>
 </table>
 <script>
-    //js here
+    const form = document.getElementById('form');
+    const description = document.getElementById('description');
+    const height = document.getElementById('height');
+    const width = document.getElementById('width');
+    const length = document.getElementById('length');
+    const weight = document.getElementById('weight');
+    const pickupDate = document.getElementById('pickup-date');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      
+    });
 </script>
