@@ -1,7 +1,87 @@
+<style>
+    input {
+        
+        padding: 5px;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+    }
+    th, td{
+    padding: 1em;
+    }
+    tfoot{
+    padding: top 10px;
+    }
+</style>
 <h1>Pricing Calculator</h1>
 <h6>
   Calculator is for rough estimates only. The more correct the information the
   better the estimate.
 </h6>
 <br /><br />
-<form></form>
+<form action="" method="GET">
+  <div>
+    <label
+      >* Short description:
+      <input
+        type="text"
+        id="item"
+        name="item"
+        placeholder="Short description"
+        required
+    /></label>
+  </div>
+  <div>
+    <label
+      >Dimensions: h (in) - <input type="number" id="height" name="height" style="width: 75px;" min="0" /> w
+      (in) - <input type="number" id="width" name="width" style="width: 75px;" min="0" /> l (in) -
+      <input type="number" id="length" name="length" style="width: 75px;" min="0" />
+    </label>
+</div>
+    <label>
+      <div>* Weight (lbs):<input type="number" id="weight" name="weight" min="0" required />
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Pickup Date: <input type="datetime-local" id="pickup-date"
+    /></label>
+  </div>
+  <input type="submit" id="add" value="Add" />
+  <input type="reset" id="rst" value="Reset Form" />
+  <div>
+  <label>* Email: <input type="email" name="email" id="email" required /></label>
+</div>
+<div>
+    <label>Phone: <input type="phone" name="phone" id="phone"/></label>
+  </div>
+</form>
+<br>
+<table id="results">
+    <thead>
+    <tr>
+        <th>Description</th>
+        <th>Dimensions</th>
+        <th>Weight</th>
+        <th>Price</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>box</td>
+        <td>Heigh: 32, Width: 32, Length: 32
+        </td>
+        <td>100 lbs</td>
+        <td></td>
+    </tr>
+</tbody>
+<tfoot>
+    <td>Date: 4 jan 2024</td>
+    <td>Email: </td>
+    <td>Phone: </td>
+</tfoot>
+</table>
+<script>
+    //js here
+</script>
