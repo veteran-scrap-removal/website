@@ -12,15 +12,29 @@
     tfoot{
     padding: top 10px;
     }
+    .customerData{
+    border: 2px solid;
+    padding: 5px;
+    }
 </style>
-<h1>Pricing Calculator</h1>
+<h1>Calculator</h1>
 <h6>
   Calculator is for rough estimates only. The more correct the information the
   better the estimate.
 </h6>
 <br /><br />
-<form id="form">
+<form action="" id="customer-data">
+  <div class="customerData">
+    <label>* Email: <input type="email" name="email" id="email" required /></label>
+ 
+      <label>Phone: <input type="phone" name="phone" id="phone"/></label>
+      <label>* Location zip: <input type="number" name="zip" id="zip" min="0" required/></label>
+    </div>
+    <br>
   <div>
+</form>
+<form id="form-items">
+  
     <label
       >* Short description:
       <input
@@ -35,7 +49,7 @@
     <label
       >Dimensions Estimate: h (in) - <input type="number" id="height" name="height" style="width: 75px;" min="0" /> w
       (in) - <input type="number" id="width" name="width" style="width: 75px;" min="0" /> l (in) -
-      <input type="number" id="length" name="length" style="width: 75px;" min="0" />
+      <input type="number" id="long" name="long" style="width: 75px;" min="0" />
     </label>
 </div>
     <label>
@@ -48,16 +62,10 @@
       Pickup Date: <input type="datetime-local" id="pickup-date"
     /></label>
   </div>
-  <input type="submit" id="add" value="Add" />
+  <input type="submit" name="add" id="add" value="Add" />
   <input type="reset" id="rst" value="Reset Form" />
-  <div>
-  <label>* Email: <input type="email" name="email" id="email" required /></label>
-</div>
-<div>
-    <label>Phone: <input type="phone" name="phone" id="phone"/></label>
-  </div>
+  <p style="font-size: small;">* required fields</p>
 </form>
-<br>
 <table id="results">
     <thead>
     <tr>
@@ -67,35 +75,46 @@
         <th>Price</th>
     </tr>
 </thead>
-<tbody>
-    <tr>
-        <td>box</td>
-        <td>Heigh: 32<br> Width: 32<br> Length: 32
-        </td>
-        <td>100 lbs</td>
-        <td></td>
-    </tr>
+<tbody id="tableData">
+
 </tbody>
-<tfoot>
-    <td>Date: 4 jan 2024</td>
-    <td>Email: </td>
-    <td>Phone: </td>
-</tfoot>
 </table>
+<br>
+<div id="customerInfo">
+  <input type="button" name="get_quote" value="Sent for Quote">
+</div>
 <script>
-    const form = document.getElementById('form');
+    const form = document.getElementById('form-items');
     const description = document.getElementById('description');
     const height = document.getElementById('height');
     const width = document.getElementById('width');
-    const length = document.getElementById('length');
+    const long = document.getElementById('long');
     const weight = document.getElementById('weight');
     const pickupDate = document.getElementById('pickup-date');
     const email = document.getElementById('email');
     const phone = document.getElementById('phone');
 
+    var dataArray = [{
+      'description': description, 'height': height, 'width':width, 'long':long,'weight':weight
+    }]
+    
+
+    function buildTable(data){
+      var table = document.getElementById('tableData');
+
+      for (var i = 0; i < data.length; i++){
+        var row = `<tr>
+          <td>${data[i].description.value}</td>
+          <td>H: ${data[i].height.value} <br>W: ${data[i].width.value} <br>L: ${data[i].long.value}</td>
+          <td>Weight: ${data[i].weight.value} lbs</td>
+        </tr>`
+
+        table.innerHTML += row
+      }
+    }
     form.addEventListener('submit', function(e){
       e.preventDefault();
+      buildTable(dataArray)
 
-      
     });
 </script>
