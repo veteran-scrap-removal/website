@@ -2,7 +2,7 @@ baseURL: "https://www.example.com/"
 theme: "up-business-theme"
 languageCode: "en-us"
 
-title: "Up Business"
+title: "Veteran Scrap Removal"
 
 # googleAnalytics: ""
 
@@ -28,14 +28,13 @@ params:
     twitter: "#"
 
   location:
-    - "3891 Ranchview Dr. Richardson, California 62639"
-    - "4517 Washington Ave. Manchester, Kentucky 39495"
+    - "Manchester, NH 03104"
 
   contact:
-    - "trungkienspktnd@gamail.com"
-    - "207.555.0119"
+    - "contact-us@veteranscrapremoval.com"
+    - "999.555.1234"
 
-  copyright: "© 2022 Up Business All Rights Reserved"
+  copyright: "© 2023 Veteran Scrap Removal"
 
 menus:
   main:
