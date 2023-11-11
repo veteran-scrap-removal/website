@@ -10,7 +10,7 @@ summaryLength: 20
 
 params:
   title: "Veteran Scrap Removal"
-  description: "We specialize in providing services to desing websites, applications, build and maintain business for customers."
+  description: "We proudly serve Manchester, NH and surrounding area with trash, junk, scrap and debris removing services."
   images:
     - "images/hero-image.png"
 
@@ -54,10 +54,6 @@ menus:
       url: "/pricing"
       weight: 20
 
-    - name: "Blog"
-      url: "/blog"
-      weight: 50
-
   buttons:
     - name: "Book a call"
       url: "/#"
@@ -80,10 +76,6 @@ menus:
     - name: "Pricing"
       url: "/pricing"
       weight: 20
-
-    - name: "Blog"
-      url: "/blog"
-      weight: 50
 
 taxonomies:
   series: "series"
