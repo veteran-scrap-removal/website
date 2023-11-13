@@ -30,7 +30,12 @@
     <label>* Email: <input type="email" name="email" id="email" required /></label>
  
       <label>Phone: <input type="phone" name="phone" id="phone"/></label>
-      <label>* Location zip: <input type="number" name="zip" id="zip" min="0" required/></label>
+      <div>
+      <label>* Location zip: <input type="number" name="zip" id="zip" min="0" required/></label><div>
+      </div>
+        <label>
+          Pickup Date: <input type="datetime-local" id="pickup-date"/></label>
+      </div>
     </div>
     <br>
   <div>
@@ -59,11 +64,7 @@
     </label>
   </div>
 
-  <div>
-    <label>
-      Pickup Date: <input type="datetime-local" id="pickup-date"
-    /></label>
-  </div>
+  
   <input type="submit" name="add" id="add" value="Add" />
   <input type="reset" id="rst" value="Reset Form" />
   <p style="font-size: small;">* required fields</p>
@@ -82,10 +83,12 @@
 </table>
 <br>
 <div id="customerInfo">
+
   <input type="submit" name="get_quote" value="Sent for Quote">
 </div>
 <script>
     const form = document.getElementById('form-items');
+    const customerInfoForm = document.getElementById('customer-data');
     const description = document.getElementById('description');
     const height = document.getElementById('height');
     const width = document.getElementById('width');
@@ -98,7 +101,7 @@
     var dataArray = [{
       'description': description, 'height': height, 'width':width, 'long':long,'weight':weight
     }]
-    
+    var customerArray = [{'email':email, 'phone':phone}]
     
     function buildTable(data){
       var table = document.getElementById('tableData');
@@ -113,15 +116,33 @@
         table.innerHTML += row
       }
     }
-    function sendQuote(){
-    
+
+    function sendQuote(customerArray){
+      for (var i = 0; i < data.length; i++){
+        if (data[i].phone == true){
+          var row = `<tr>
+            <td>${data[i].email.value}</td>
+            <td>${data[i].phone.value} </td>
+            <td>${data[i].date.value} lbs</td>
+            <td> ${data[i].location.value} lbs</td>
+          </tr>`
+        }else{
+        var row = `<tr>
+            <td>${data[i].email.value}</td>
+            <td>${data[i].phone.value} </td>
+            <td>${data[i].date.value} lbs</td>
+            <td> ${data[i].location.value} lbs</td>
+          </tr>`
+
+        table.innerHTML += row
+      }
     }
     form.addEventListener('submit', function(e){
       e.preventDefault();
       buildTable(dataArray)
 
     });
-    form.addEventListener('submit', function(e){
+    customerInfoForm.addEventListener('click', function(e){
       e.preventDefault();
       sendQuote();
 
