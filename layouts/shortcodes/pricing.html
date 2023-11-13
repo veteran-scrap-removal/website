@@ -119,7 +119,7 @@
 
     function sendQuote(data){
       for (var i = 0; i < data.length; i++){
-        if (data[i].phone == true){
+        if (data[i].phone && data[i].date == true){
           var row = `<tr>
             <td>${data[i].email.value}</td>
             <td>${data[i].phone.value} </td>
