@@ -109,15 +109,15 @@
       for (var i = 0; i < data.length; i++){
         var row = `<tr>
           <td>${data[i].description.value}</td>
-          <td>H: ${data[i].height.value} <br>W: ${data[i].width.value} <br>L: ${data[i].long.value}</td>
-          <td>Weight: ${data[i].weight.value} lbs</td>
+          <td>H: ${data[i].height.value} in.<br>W: ${data[i].width.value} in.<br>L: ${data[i].long.value} in.</td>
+          <td>Weight: ${data[i].weight.value} lbs.</td>
         </tr>`
 
         table.innerHTML += row
       }
     }
 
-    function sendQuote(customerArray){
+    function sendQuote(data){
       for (var i = 0; i < data.length; i++){
         if (data[i].phone == true){
           var row = `<tr>
@@ -135,8 +135,10 @@
           </tr>`
 
         table.innerHTML += row
+        }
       }
     }
+
     form.addEventListener('submit', function(e){
       e.preventDefault();
       buildTable(dataArray)
@@ -144,7 +146,7 @@
     });
     customerInfoForm.addEventListener('click', function(e){
       e.preventDefault();
-      sendQuote();
+      sendQuote(customerArray);
 
     });
 </script>
