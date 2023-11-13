@@ -114,9 +114,17 @@
         table.innerHTML += row
       }
     }
+    function sendQuote(){
+    
+    }
     form.addEventListener('submit', function(e){
       e.preventDefault();
       buildTable(dataArray)
+
+    });
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      sendQuote();
 
     });
 </script>
