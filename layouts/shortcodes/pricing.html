@@ -83,7 +83,7 @@
 </table>
 <br>
 <div id="customerInfo">
-  <input type="button" name="get_quote" value="Sent for Quote">
+  <input type="submit" name="get_quote" value="Sent for Quote">
 </div>
 <script>
     const form = document.getElementById('form-items');
@@ -100,7 +100,7 @@
       'description': description, 'height': height, 'width':width, 'long':long,'weight':weight
     }]
     
-
+    
     function buildTable(data){
       var table = document.getElementById('tableData');
 
