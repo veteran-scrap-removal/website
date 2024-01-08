@@ -20,7 +20,7 @@ content:
         url: "#"
 
     - image: "images/services-web-development.png"
-      title: "Construction Cleanup"
+      title: "Construction Waste Removal"
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent. "
       button:
         label: "Learn more"
