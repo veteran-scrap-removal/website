@@ -50,9 +50,9 @@ menus:
       url: "/#"
       weight: 40
 
-    - name: "Pricing"
-      url: "/pricing"
-      weight: 20
+    # - name: "Pricing"
+    #   url: "/pricing"
+    #   weight: 20
 
   buttons:
     - name: "Book a call"
@@ -73,9 +73,9 @@ menus:
       url: "/#"
       weight: 40
 
-    - name: "Pricing"
-      url: "/pricing"
-      weight: 20
+    # - name: "Pricing"
+    #   url: "/pricing"
+    #   weight: 20
 
 taxonomies:
   series: "series"
