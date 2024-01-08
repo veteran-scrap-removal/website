@@ -2,7 +2,7 @@ enabled: true
 id: "services"
 
 content:
-  title: "Our main services"
+  title: "Core Services"
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec quam nibh elit pellentesque velit netus suspendisse. Sed enim, pretium, montes, in ut dolor urna."
   cards:
     - image: "images/garbage-truck-green-color-with-trash-bag.png"

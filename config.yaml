@@ -10,7 +10,7 @@ summaryLength: 20
 
 params:
   title: "Veteran Scrap Removal"
-  description: "We proudly serve Manchester, NH and surrounding area with trash, junk, scrap and debris removing services."
+  description: "We are a veteran owned company, proudly serving the Manchester, NH and surrounding areas with trash, junk, scrap, and debris removing services."
   images: "images/full_logo_black.png"
 
   logo: "images/small_logo_black.png"
@@ -25,7 +25,6 @@ params:
     faviconColor: "#000000"
 
   social:
-    dribbble: "#"
     instagram: "#"
     facebook: "#"
     twitter: "#"
@@ -45,8 +44,8 @@ menus:
       url: "/"
       weight: 10
 
-    - name: "How we work"
-      url: "/#"
+    - name: "How We Work"
+      url: "/how-we-work"
       weight: 30
 
     - name: "About Us"
@@ -68,8 +67,8 @@ menus:
       url: "/"
       weight: 10
 
-    - name: "How we work"
-      url: "/#"
+    - name: "How We Work"
+      url: "/how-we-work"
       weight: 30
 
     - name: "About Us"
