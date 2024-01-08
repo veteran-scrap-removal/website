@@ -19,7 +19,7 @@
 
 
 <meta name="application-name" content="Veteran Scrap Removal">
-<meta name="msapplication-tooltip" content="We specialize in providing services to desing websites, applications, build and maintain business for customers."><meta name="msapplication-config" content="https://www.example.com/site.webmanifest">
+<meta name="msapplication-tooltip" content="We proudly serve Manchester, NH and surrounding area with trash, junk, scrap and debris removing services."><meta name="msapplication-config" content="https://www.example.com/site.webmanifest">
 
 
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://www.example.com/favicon-180.png">
@@ -48,7 +48,7 @@
   
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://www.example.com/images/hero-image.png"/>
+<meta name="twitter:image" content="https://www.example.com/images/garbage-truck-green-color-with-trash-bag.png"/>
 
 <meta name="twitter:title" content="Pricing"/>
 <meta name="twitter:description" content="How much does it cost?"/>
@@ -57,7 +57,7 @@
 <meta itemprop="name" content="Pricing">
 <meta itemprop="description" content="How much does it cost?">
 
-<meta itemprop="wordCount" content="49"><meta itemprop="image" content="https://www.example.com/images/hero-image.png"/>
+<meta itemprop="wordCount" content="58"><meta itemprop="image" content="https://www.example.com/images/garbage-truck-green-color-with-trash-bag.png"/>
 <meta itemprop="keywords" content="" />
 
 
@@ -178,7 +178,7 @@
       <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
         
           <li class="nav-item text-center">
-            <a class="nav-link text-primary px-4" href="/#hero">Home</a>
+            <a class="nav-link text-primary px-4" href="/">Home</a>
           </li>
         
           <li class="nav-item text-center">
@@ -187,14 +187,6 @@
         
           <li class="nav-item text-center">
             <a class="nav-link text-primary px-4" href="/">Our team</a>
-          </li>
-        
-          <li class="nav-item text-center">
-            <a class="nav-link text-primary px-4" href="/pricing">Pricing</a>
-          </li>
-        
-          <li class="nav-item text-center">
-            <a class="nav-link text-primary px-4" href="/blog">Blog</a>
           </li>
         
       </ul>
@@ -248,13 +240,20 @@
   Calculator is for rough estimates only. The more correct the information the
   better the estimate.
 </h6>
-<br /><br />
+<br>
+<h3>idea: curb side vs. clean out, same day vs. scheduled</h3>
+<br />
 <form action="" id="customer-data">
   <div class="customerData">
     <label>* Email: <input type="email" name="email" id="email" required /></label>
  
       <label>Phone: <input type="phone" name="phone" id="phone"/></label>
-      <label>* Location zip: <input type="number" name="zip" id="zip" min="0" required/></label>
+      <div>
+      <label>* Location zip: <input type="number" name="zip" id="zip" min="0" required/></label><div>
+      </div>
+        <label>
+          Pickup Date: <input type="datetime-local" id="pickup-date"/></label>
+      </div>
     </div>
     <br>
   <div>
@@ -283,11 +282,7 @@
     </label>
   </div>
 
-  <div>
-    <label>
-      Pickup Date: <input type="datetime-local" id="pickup-date"
-    /></label>
-  </div>
+  
   <input type="submit" name="add" id="add" value="Add" />
   <input type="reset" id="rst" value="Reset Form" />
   <p style="font-size: small;">* required fields</p>
@@ -298,7 +293,6 @@
         <th>Description</th>
         <th>Dimensions</th>
         <th>Weight</th>
-        <th>Price</th>
     </tr>
 </thead>
 <tbody id="tableData">
@@ -307,10 +301,12 @@
 </table>
 <br>
 <div id="customerInfo">
-  <input type="button" name="get_quote" value="Sent for Quote">
+
+  <input type="submit" name="get_quote" value="Sent for Quote">
 </div>
 <script>
     const form = document.getElementById('form-items');
+    const customerInfoForm = document.getElementById('customer-data');
     const description = document.getElementById('description');
     const height = document.getElementById('height');
     const width = document.getElementById('width');
@@ -323,24 +319,52 @@
     var dataArray = [{
       'description': description, 'height': height, 'width':width, 'long':long,'weight':weight
     }]
+    var customerArray = [{'email':email, 'phone':phone}]
     
-
     function buildTable(data){
       var table = document.getElementById('tableData');
 
       for (var i = 0; i < data.length; i++){
         var row = `<tr>
           <td>${data[i].description.value}</td>
-          <td>H: ${data[i].height.value} <br>W: ${data[i].width.value} <br>L: ${data[i].long.value}</td>
-          <td>Weight: ${data[i].weight.value} lbs</td>
+          <td>H: ${data[i].height.value} in.<br>W: ${data[i].width.value} in.<br>L: ${data[i].long.value} in.</td>
+          <td>Weight: ${data[i].weight.value} lbs.</td>
         </tr>`
 
         table.innerHTML += row
       }
     }
+
+    function sendQuote(data){
+      for (var i = 0; i < data.length; i++){
+        if (data[i].phone && data[i].date == true){
+          var row = `<tr>
+            <td>${data[i].email.value}</td>
+            <td>${data[i].phone.value} </td>
+            <td>${data[i].date.value} lbs</td>
+            <td> ${data[i].location.value} lbs</td>
+          </tr>`
+        }else{
+        var row = `<tr>
+            <td>${data[i].email.value}</td>
+            <td>${data[i].phone.value} </td>
+            <td>${data[i].date.value} lbs</td>
+            <td> ${data[i].location.value} lbs</td>
+          </tr>`
+
+        table.innerHTML += row
+        }
+      }
+    }
+
     form.addEventListener('submit', function(e){
       e.preventDefault();
       buildTable(dataArray)
+
+    });
+    customerInfoForm.addEventListener('click', function(e){
+      e.preventDefault();
+      sendQuote(customerArray);
 
     });
 </script>
@@ -358,7 +382,7 @@
     <div class="row pb-5">
       <div class="col-12 col-xl-4 text-center text-xl-start pb-4">
         <h4 class="fs-4 fw-semibold text-uppercase text-primary">Veteran Scrap Removal</h4>
-        <p class="small text-black-61">We specialize in providing services to desing websites, applications, build and maintain business for customers.</p>
+        <p class="small text-black-61">We proudly serve Manchester, NH and surrounding area with trash, junk, scrap and debris removing services.</p>
         
         <ul class="d-flex justify-content-center justify-content-xl-start list-unstyled">
           <li class="rounded-circle bg-blue-63 me-2 p-2"><a class="d-flex align-items-center justify-content-center size-16" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dribbble" viewBox="0 0 16 16">
@@ -385,7 +409,7 @@
         <ul class="list-unstyled">
           
             <li class="">
-              <a class="small text-black-61 text-decoration-none" href="/#hero">Home</a>
+              <a class="small text-black-61 text-decoration-none" href="/">Home</a>
             </li>
           
             <li class="">
@@ -394,14 +418,6 @@
           
             <li class="">
               <a class="small text-black-61 text-decoration-none" href="/">Our team</a>
-            </li>
-          
-            <li class="">
-              <a class="small text-black-61 text-decoration-none" href="/">Pricing</a>
-            </li>
-          
-            <li class="">
-              <a class="small text-black-61 text-decoration-none" href="/blog">Blog</a>
             </li>
           
         </ul>
