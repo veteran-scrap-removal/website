@@ -3,7 +3,7 @@ id: "hero"
 
 content:
   title: "**No** job too **big** **No** junk too **small**"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est faucibus tellus leo non pellentesque lorem vel. Arcu magna eros, potenti duis."
+  text: "We proudly serve Manchester, NH and surrounding area with trash, junk, scrap and debris removing services."
 
   buttonPrimary:
     label: "How we work"
@@ -11,4 +11,4 @@ content:
 
   buttonSecondary:
     label: "Let's talk"
-    url: ""
+    url: "/contact"

@@ -2,12 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.example.com/pricing/</loc>
+    <loc>https://veteranscrapremoval.netlify.app/contact/</loc>
   </url><url>
-    <loc>https://www.example.com/series/</loc>
+    <loc>https://veteranscrapremoval.netlify.app/pricing/</loc>
   </url><url>
-    <loc>https://www.example.com/tags/</loc>
+    <loc>https://veteranscrapremoval.netlify.app/series/</loc>
   </url><url>
-    <loc>https://www.example.com/</loc>
+    <loc>https://veteranscrapremoval.netlify.app/tags/</loc>
+  </url><url>
+    <loc>https://veteranscrapremoval.netlify.app/</loc>
   </url>
 </urlset>
