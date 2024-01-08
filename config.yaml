@@ -11,9 +11,9 @@ summaryLength: 20
 params:
   title: "Veteran Scrap Removal"
   description: "We proudly serve Manchester, NH and surrounding area with trash, junk, scrap and debris removing services."
-  images: "images/garbage-truck-green-color-with-trash-bag.png"
+  images: "images/full_logo_black.png"
 
-  logo: "images/full_logo_black.png"
+  logo: "images/small_logo_black.png"
 
   attribute: <a href="https://www.freepik.com/free-vector/garbage-truck-green-color-with-trash-bag_39207411.htm#query=trash%20truck&position=1&from_view=search&track=ais&uuid=f3929724-d3c3-4b36-8a4d-45b23ce038ca">Image by brgfx</a>on Freepik
 
