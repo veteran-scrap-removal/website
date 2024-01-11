@@ -7,7 +7,7 @@ content:
   cards:
     - image: "images/garbage-truck-green-color-with-trash-bag.png"
       title: "Rural Trash Pickup"
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent. "
+      text: "We bring a city convenience to you. We do weekly pickups, seasonal yard cleanouts, or bulky item removal, we are committed to keeping the rural charm of your community shining."
       button:
         label: "Learn more"
         url: "#"

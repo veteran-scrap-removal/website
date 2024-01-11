@@ -57,7 +57,7 @@ menus:
     #   weight: 20
 
   buttons:
-    - name: "Book a call"
+    - name: "Give us a call"
       url: "/contact"
       weight: 60
       pre: "btn btn-primary text-light"
