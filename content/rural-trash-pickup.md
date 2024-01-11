@@ -1,0 +1,3 @@
+---
+title: Rural Trash Pickup
+---
