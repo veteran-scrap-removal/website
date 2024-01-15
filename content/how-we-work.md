@@ -1,8 +1,10 @@
 ---
 title: How We Work
+description:
 ---
 
-Clearing clutter with clarity: How VSR makes junk removal a breeze
+### Clearing clutter with clarity: How VSR makes junk removal a breeze
+
 Getting rid of unwanted belongings shouldn't be a mystery. That's why VSR takes the guesswork out of junk removal with a transparent, two-step process. We believe in upfront pricing tailored to your specific needs, so you won't be surprised by hidden fees or sudden cost jumps.
 
 Here's how it works:
