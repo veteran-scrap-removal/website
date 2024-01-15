@@ -1,6 +1,6 @@
 ---
 title: How We Work
-description:
+description: Our Two-Step Process for Quotes
 ---
 
 ### Clearing clutter with clarity: How VSR makes junk removal a breeze
