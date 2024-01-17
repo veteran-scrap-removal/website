@@ -27,7 +27,6 @@ params:
   social:
     instagram: "#"
     facebook: "#"
-    twitter: "#"
 
   location:
     - "Manchester, NH 03104"
