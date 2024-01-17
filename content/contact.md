@@ -8,7 +8,7 @@ Please reach out by phone at [774.406.3678](tel:7744063678) or email at [contact
 
 **5% off** new customers with a referral. To qualify, just tells us which of our customers referred you. (limit one per customer)
 
-**$15 Visa Gift Card** for referring. Someone you referred purchase one of our services and we send you a gift card. (no limit, really, so tell all your friends)
+**$15 Visa Gift Card** for referring. Someone you referred purchases one of our services and we send you a gift card. (no limit, really, so tell all your friends)
 
 #### Current Specials:
 
