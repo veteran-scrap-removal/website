@@ -10,7 +10,7 @@ Please reach out by phone at [774.406.3678](tel:7744063678) or email at [contact
 
 **$15 Visa Gift Card** for referring. Someone you referred purchases one of our services and we send you a gift card. (no limit, really, so tell all your friends)
 
-**Returning Customers** get 10% next job with valid Google Review.
+**Returning Customers** get 10% off their next job with posted Google Review.
 
 #### Current Specials:
 
